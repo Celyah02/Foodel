@@ -1,0 +1,1 @@
+<img className={category=== item.menu_name? "active":""}  src={item.menu_image} alt="" /> //for the borders on the menu
