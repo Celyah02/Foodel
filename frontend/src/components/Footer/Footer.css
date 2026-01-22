@@ -1,35 +1,100 @@
 .footer {
     color: #d9d9d9;
     background-color: #323232;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 100px;
+    padding-top: 80px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 20px 8vw;
-    padding-top: 80px;
-    margin-top: 100px;
-    width: 100%;  /* Ensure full width */
-    box-sizing: border-box; /* Prevents extra spacing issues */
 }
 
 .footer-content {
     width: 100%;
-    max-width: 1200px; /* Prevents stretching too much on large screens */
+    max-width: 1200px;
+    padding: 0 8vw;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 80px;
 }
 
-/* Fix for full-width alignment */
-html, body {
+.footer-content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-content-left img {
+    width: 200px;
+}
+
+.footer-content-left p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social-icons img {
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-content-center,
+.footer-content-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-content-center h2,
+.footer-content-right h2 {
+    font-size: 18px;
     margin: 0;
+    margin-bottom: 10px;
+}
+
+.footer-content-center ul,
+.footer-content-right ul {
+    list-style: none;
     padding: 0;
-    width: 100%;
-    overflow-x: hidden; /* Prevents horizontal scrolling issues */
+    margin: 0;
+}
+
+.footer-content-center li,
+.footer-content-right li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-content-center li:hover,
+.footer-content-right li:hover {
+    color: #ff6347;
 }
 
 .footer hr {
-    width: 100%;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     margin: 20px 0px;
     height: 2px;
     background-color: #808080;
@@ -50,7 +115,17 @@ html, body {
         align-items: center;
     }
 
-    .footer-copyright {
-        text-align: center;
+    .footer-content-left, .footer-content-right, .footer-content-center {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
+
+.footer-copyright {
+    width: 100%;
+    padding: 20px 8vw;
+    text-align: center;
+    font-size: 14px;
+}
 }
